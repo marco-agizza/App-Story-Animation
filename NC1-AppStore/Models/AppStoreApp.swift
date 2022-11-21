@@ -15,9 +15,6 @@ enum AppCategory{
 
 struct AppStoreApp: Identifiable {
     let id = UUID()
-    var icon: String
-    var name: String
-    var provider: String
-    var visitCount: Int
     var category: AppCategory
+    var icon, name, provider: String
 }

@@ -7,26 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		521FEBEC292BD79E006B65F7 /* AppStory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521FEBEB292BD79E006B65F7 /* AppStory.swift */; };
 		527F3114292522F00019BDE2 /* NC1_AppStoreApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527F3113292522F00019BDE2 /* NC1_AppStoreApp.swift */; };
-		527F3116292522F00019BDE2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527F3115292522F00019BDE2 /* ContentView.swift */; };
 		527F3118292522F10019BDE2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 527F3117292522F10019BDE2 /* Assets.xcassets */; };
 		527F311B292522F10019BDE2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 527F311A292522F10019BDE2 /* Preview Assets.xcassets */; };
 		527F3122292535D50019BDE2 /* AppStoreApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527F3121292535D50019BDE2 /* AppStoreApp.swift */; };
-		527F3126292537CA0019BDE2 /* AppModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527F3125292537CA0019BDE2 /* AppModelView.swift */; };
+		527F3126292537CA0019BDE2 /* AppStoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527F3125292537CA0019BDE2 /* AppStoryViewModel.swift */; };
 		527F3128292539730019BDE2 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527F3127292539730019BDE2 /* Database.swift */; };
 		527F312B29256B440019BDE2 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527F312A29256B440019BDE2 /* CardView.swift */; };
+		527F312D2926E7600019BDE2 /* TodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527F312C2926E7600019BDE2 /* TodayView.swift */; };
+		527F31312927CB350019BDE2 /* AppBannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527F31302927CB350019BDE2 /* AppBannerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		521FEBEB292BD79E006B65F7 /* AppStory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStory.swift; sourceTree = "<group>"; };
 		527F3110292522F00019BDE2 /* NC1-AppStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NC1-AppStore.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		527F3113292522F00019BDE2 /* NC1_AppStoreApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NC1_AppStoreApp.swift; sourceTree = "<group>"; };
-		527F3115292522F00019BDE2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		527F3117292522F10019BDE2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		527F311A292522F10019BDE2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		527F3121292535D50019BDE2 /* AppStoreApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreApp.swift; sourceTree = "<group>"; };
-		527F3125292537CA0019BDE2 /* AppModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModelView.swift; sourceTree = "<group>"; };
+		527F3125292537CA0019BDE2 /* AppStoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoryViewModel.swift; sourceTree = "<group>"; };
 		527F3127292539730019BDE2 /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
 		527F312A29256B440019BDE2 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		527F312C2926E7600019BDE2 /* TodayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayView.swift; sourceTree = "<group>"; };
+		527F31302927CB350019BDE2 /* AppBannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppBannerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +64,7 @@
 			isa = PBXGroup;
 			children = (
 				527F3113292522F00019BDE2 /* NC1_AppStoreApp.swift */,
-				527F31242925372A0019BDE2 /* ModelView */,
+				527F31242925372A0019BDE2 /* ViewModel */,
 				527F3123292535DE0019BDE2 /* Models */,
 				527F3129292569090019BDE2 /* Views */,
 				527F3117292522F10019BDE2 /* Assets.xcassets */,
@@ -81,24 +85,26 @@
 			isa = PBXGroup;
 			children = (
 				527F3121292535D50019BDE2 /* AppStoreApp.swift */,
+				521FEBEB292BD79E006B65F7 /* AppStory.swift */,
 				527F3127292539730019BDE2 /* Database.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
 		};
-		527F31242925372A0019BDE2 /* ModelView */ = {
+		527F31242925372A0019BDE2 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				527F3125292537CA0019BDE2 /* AppModelView.swift */,
+				527F3125292537CA0019BDE2 /* AppStoryViewModel.swift */,
 			);
-			path = ModelView;
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		527F3129292569090019BDE2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				527F3115292522F00019BDE2 /* ContentView.swift */,
+				527F312C2926E7600019BDE2 /* TodayView.swift */,
 				527F312A29256B440019BDE2 /* CardView.swift */,
+				527F31302927CB350019BDE2 /* AppBannerView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -173,9 +179,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				527F31312927CB350019BDE2 /* AppBannerView.swift in Sources */,
 				527F3122292535D50019BDE2 /* AppStoreApp.swift in Sources */,
-				527F3126292537CA0019BDE2 /* AppModelView.swift in Sources */,
-				527F3116292522F00019BDE2 /* ContentView.swift in Sources */,
+				527F3126292537CA0019BDE2 /* AppStoryViewModel.swift in Sources */,
+				521FEBEC292BD79E006B65F7 /* AppStory.swift in Sources */,
+				527F312D2926E7600019BDE2 /* TodayView.swift in Sources */,
 				527F3128292539730019BDE2 /* Database.swift in Sources */,
 				527F312B29256B440019BDE2 /* CardView.swift in Sources */,
 				527F3114292522F00019BDE2 /* NC1_AppStoreApp.swift in Sources */,
