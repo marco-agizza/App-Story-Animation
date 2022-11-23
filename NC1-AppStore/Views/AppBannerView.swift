@@ -13,15 +13,16 @@ enum AppBannerType {
 
 // AmericanoFun
 struct AppBannerView: View {
+    var animation: Namespace.ID
     let type : AppBannerType
-    let apps: [AppStoreApp]
+    let appStory: AppStory
     
     var body: some View {
         HStack{
             if type == .multiple {
-                
+                Spacer()
                 ForEach(0 ..< 4){ index in
-                    Image(apps[index].icon)
+                    Image(appStory.appStoreApps[index].icon)
                         .resizable()
                         .cornerRadius(7)
                         .frame(width: 60, height: 60)
@@ -29,15 +30,15 @@ struct AppBannerView: View {
                         Spacer()
                     }
                 }
+                Spacer()
             }
         }
         .padding(.horizontal)
-
     }
 }
 
-struct AppBannerView_Previews: PreviewProvider {
+/*struct AppBannerView_Previews: PreviewProvider {
     static var previews: some View {
         AppBannerView(type: .multiple, apps: appsData)
     }
-}
+}*/

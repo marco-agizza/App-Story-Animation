@@ -9,7 +9,8 @@ import Foundation
 
 class AppStoryViewModel: ObservableObject{
     @Published var apps : [AppStory]
-    
+    @Published var selectedStory = AppStory(type: .appFamilyCollection, subtitle: "", title: "", description: "", wallpaper: "", appStoreApps: [])
+    @Published var show = false
     
     init(){
         apps = appStoryData

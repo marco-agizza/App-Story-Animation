@@ -21,4 +21,3 @@ struct AppStory: Identifiable {
     let subtitle, title, description, wallpaper: String
     let appStoreApps: [AppStoreApp]
 }
-    

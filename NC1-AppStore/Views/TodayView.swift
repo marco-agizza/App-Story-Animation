@@ -8,12 +8,11 @@
 import SwiftUI
 
 struct TodayView: View {
-    @Environment (\.colorScheme) var color
-    @ObservedObject var appStoryViewModel = AppStoryViewModel()
+    @Environment(\.colorScheme) var color
+    @EnvironmentObject var appStory: AppStoryViewModel
     var animation: Namespace.ID
     
     var body: some View {
-        //NavigationStack {
             ScrollView {
                 LazyVStack{
                     HStack(alignment: .bottom){
@@ -30,7 +29,7 @@ struct TodayView: View {
                         Spacer()
                         Button(
                             action: {
-
+                                
                             },
                             label: {
                                 Image(systemName: "person.circle")
@@ -40,18 +39,18 @@ struct TodayView: View {
                     }
                     .padding(.horizontal)
                     .padding(.bottom, 1)
-                    ForEach(appStoryViewModel.apps){ app in
+                    ForEach(appStory.apps){ app in
                         CardView(animation: animation, appStory: app)
+                            .onTapGesture {
+                                withAnimation(.interactiveSpring(response: 0.5, dampingFraction: 0.55, blendDuration: 0.8)){
+                                    appStory.selectedStory = app
+                                    appStory.show.toggle()
+                                }
+                            }
                     }
                 }
             }
             .padding(.top, 1)
             .background(color == .light ? Color.primary.opacity(0.1) : .black)
-            
         }
-        //.padding(.top, 1)
-    //}
-    
 }
-
-

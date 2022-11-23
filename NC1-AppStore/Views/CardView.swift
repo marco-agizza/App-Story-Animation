@@ -17,13 +17,11 @@ struct CardView: View {
     var animation: Namespace.ID
     let appStory: AppStory
     
-    
     var body: some View {
         if appStory.type == .appArticle || appStory.type == .appOfTheDay || appStory.type == .appFamilyCollection {
             VStack{
                 Image(appStory.wallpaper)
                     .resizable()
-                    //.frame(width: 350, height: 400, alignment: .center)
                     .frame (width: UIScreen.main.bounds.width - 30, height: 400)
                     .matchedGeometryEffect(id: appStory.wallpaper, in: animation)
                     .aspectRatio(contentMode: .fill)
@@ -35,17 +33,18 @@ struct CardView: View {
                                         .foregroundColor(.gray)
                                         .fontWeight(.semibold)
                                         .font(.system(size: 16))
+                                        .matchedGeometryEffect(id: appStory.subtitle, in: animation)
                                     Text(appStory.title)
                                         .foregroundColor(.white)
                                         .fontWeight(.bold)
                                         .font(.title)
+                                        .matchedGeometryEffect(id: appStory.title, in: animation)
                                     Spacer()
                                 }
                                 .padding(.top, 15)
                                 Spacer()
                             }
                             .padding(.horizontal, 20)
-                            
                         }
                         if appStory.type == .appOfTheDay {
                             HStack{
@@ -54,7 +53,6 @@ struct CardView: View {
                                     Text("app".uppercased())
                                     Text("of the".uppercased())
                                     Text("day".uppercased())
-                                    
                                 }
                                 .font(.system(size: 43))
                                 .foregroundColor(.white)
@@ -66,20 +64,17 @@ struct CardView: View {
                             .padding(.horizontal, 20)
                         }
                     }
-                    
                 if appStory.type == .appFamilyCollection {
-                    if appStory.type == .appFamilyCollection {
-                        AppBannerView(type: .multiple, apps: appStory.appStoreApps)
-                            .padding(.bottom, 10)
-                            .matchedGeometryEffect(id: appStory.id, in: animation)
-                    }
+                    AppBannerView(animation: animation, type: .multiple, appStory: appStory)
+                        .padding(.bottom, 10)
+                        .matchedGeometryEffect(id: appStory.id, in: animation)
                 }
             }
-            //.background(Color(UIColor.secondarySystemBackground))
             .background(color == .light ? .white : Color.primary.opacity(0.1))
             .cornerRadius(15)
             .padding(.horizontal)
             .padding(.top)
-        } //else if
+            .matchedGeometryEffect(id: appStory.type.hashValue, in: animation)
+        } //else if...
     }
 }
