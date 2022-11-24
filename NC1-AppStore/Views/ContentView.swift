@@ -115,9 +115,9 @@ struct ContentView: View {
     
     func onChanged(value: DragGesture.Value){
         let scale = value.translation.height / UIScreen.main.bounds.height
-        if 1 - scale > 0.9 && scale > 0{
+        if 1 - scale > 0.7 && scale > 0{
             self.scale = 1 - scale
-        } else if 1 - scale <= 0.9 {
+        } else if 1 - scale <= 0.7 {
             self.showDescription.toggle()
             withAnimation(.interactiveSpring(response: 0.5, dampingFraction: 0.55, blendDuration: 0.8)){
                 appStory.show.toggle()
