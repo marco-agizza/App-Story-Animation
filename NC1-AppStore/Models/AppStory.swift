@@ -18,6 +18,7 @@ enum CardType {
 struct AppStory: Identifiable {
     let id = UUID()
     let type: CardType
-    let subtitle, title, description, wallpaper: String
+    let subtitle, title, wallpaper: String
+    let description: [String]
     let appStoreApps: [AppStoreApp]
 }

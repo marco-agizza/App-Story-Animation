@@ -63,6 +63,7 @@ struct CardView: View {
                             }
                             .padding(.horizontal, 20)
                         }
+                        Spacer()
                     }
                 if appStory.type == .appFamilyCollection {
                     AppBannerView(animation: animation, type: .multiple, appStory: appStory)

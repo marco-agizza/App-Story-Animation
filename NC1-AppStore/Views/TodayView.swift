@@ -40,13 +40,15 @@ struct TodayView: View {
                     .padding(.horizontal)
                     .padding(.bottom, 1)
                     ForEach(appStory.apps){ app in
-                        CardView(animation: animation, appStory: app)
-                            .onTapGesture {
-                                withAnimation(.interactiveSpring(response: 0.5, dampingFraction: 0.55, blendDuration: 0.8)){
-                                    appStory.selectedStory = app
-                                    appStory.show.toggle()
+                        if !appStory.show {
+                            CardView(animation: animation, appStory: app)
+                                .onTapGesture {
+                                    withAnimation(.interactiveSpring(response: 0.5, dampingFraction: 0.55, blendDuration: 0.8)){
+                                        appStory.selectedStory = app
+                                        appStory.show.toggle()
+                                    }
                                 }
-                            }
+                        }
                     }
                 }
             }

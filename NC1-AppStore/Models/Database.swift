@@ -43,5 +43,24 @@ let appsData = [
 ]
 
 let appStoryData = [
-    AppStory(type: .appFamilyCollection, subtitle: "What to watch", title: "Stream these family friendly hits", description: "Meet the game makers who are thinking green", wallpaper: "ManWatchingTv", appStoreApps: appsData)
+    AppStory(
+        type: .appFamilyCollection,
+        subtitle: "What to watch",
+        title: "Stream these family friendly hits",
+        wallpaper: "ManWatchingTv",
+        description: [
+                        """
+                        There's nothing quite like
+                        """,
+                        """
+                        spending some quality time with family, all cosied up and enjoying a great movie or series together. So get the popcorn ready and settle in front of the screen with these fantastic family friendly picks.
+                        """,
+                        """
+                        Costume Quest
+                        """,
+                        """
+                        Imagination is the weapon of choice against monsters invading the town of Auburn Hollow. Join Wren, Reynold, Everett and Luew as they turn into
+                        """
+                     ],
+        appStoreApps: appsData)
 ]
