@@ -19,7 +19,7 @@ struct AppStoryBodyView: View {
             ) +
             Text(
              """
-            spending some quality time with family, all cosied up and enjoying a great movie or series together.\
+             spending some quality time with family, all cosied up and enjoying a great movie or series together. \
             So get the popcorn ready and settle in front of the screen with these fantastic family friendly picks.\n
             """
             )
